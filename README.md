@@ -1,6 +1,7 @@
 "# Auto data process of HPLC-QQQ-MS Vitamin D test" 
 
-Autho: Yunqi Y. at Purity Labs
+Author: Yunqi Y. at Purity Labs
+Contact: yyan@puritylabsinc.com
 
 The code is writeen in Python to load/process data and generate report xlsx file automatically to avoid human copy/paste error
 
