@@ -20,14 +20,14 @@ pub_by=input("Published by: ")
 test_day=str(input("Enter Test Date YYMMDD: "))
 
 """ Get Sample Info """
-num_pun3=int(input("Total Number of 3.2 Punch: "))
+num_pun3=int(input("Total Number of 3.2 xxx: "))
 pun3={}
 sp_pun3_name=[]
 sp_pun3_num=[]
 for i in range(0,num_pun3):
-    id=str(input("Enter 3.2 Punch Sample ID: ")).upper()
+    id=str(input("Enter 3.2 xxx Sample ID: ")).upper()
     sp_pun3_name.append(id)
-    num=int(input("Number of punches? "))
+    num=int(input("Number of xxx? "))
     sp_pun3_num.append(num)
     pun3[id]=num
 
@@ -39,19 +39,19 @@ def find_date():
 
 """ //Crate Library To Store Info// """ ## Library is Dictionary in Python
 """ lib VSP target """
-vsp_lib_d3={"VSP 93":61,"VSP 95":23,"VSP 97":11,"VSP 98":24,"VSP 103":33}
-vsp_lib_d2={"VSP 93":np.nan,"VSP 97":17,"VSP 98":31,"VSP 103":3}
+vsp_lib_d3={"93":11,"95":12,"97":13,"98":14,"103":15}
+vsp_lib_d2={"93":np.nan,"97":22,"98":33,"103":44}
 
 """ lib patient target """
-pat_d3={"Patient 102":16,'Patient 90':32,'Patient 75':47,'Patient 66':25}
-pat_d2={"Patient 102":29,'Patient 90':0,'Patient 75':0,'Patient 66':1}
+pat_d3={"102":0,'90':1,'75':2,'98':3}
+pat_d2={"102":4,'90':5,'75':6,'66':6}
 
 """ lib ABVD """
-ABVD_d3_lib={"ABVD-01":19.84,"ABVD-02":36.53,"ABVD-03":27.96,"ABVD-07":67.23,"ABVD-08":10.68,"ABVD-09":19.2}
-ABVD_d2_lib={"ABVD-01":25.65,"ABVD-02":0.9,"ABVD-03":0.79,"ABVD-07":1.28,"ABVD-08":4.96,"ABVD-09":1.74}
+ABVD_d3_lib={"ABVD-01":0,"ABVD-02":0,"ABVD-03":0,"ABVD-07":0,"ABVD-08":0,"ABVD-09":0}
+ABVD_d2_lib={"ABVD-01":0,"ABVD-02":0,"ABVD-03":0,"ABVD-07":0,"ABVD-08":0,"ABVD-09":0}
 
 """ lib punch size """
-pun_fac={"6mm x1":1,"3.2mm x4":1.1378,"3.2mm x3":0.8533,"3.2mm x2":0.568889}
+pun_fac={"6mm x1":1,"3.2mm x4":0,"3.2mm x3":0,"3.2mm x2":0}
 
 """ lib Calibration """
 cal={"L1":1.953125,"L2":3.90625,"L3":7.8125,"L4":15.625,"L5":31.25,"L6":62.5,"L7":125,"L8":250}
@@ -75,7 +75,7 @@ df_abvd["Total 25OHD"]=df_abvd["25OHD3_Target"]+df_abvd["25OHD2_Target"]
 
 folder=r"C:\Users\yyan\Documents\Data\VitD_DBS\WKD"
 folder=os.path.join(folder,'VITD_'+test_day)
-f_path=os.path.join(folder,r"QuantReport_ISTD_ResultsSummary_FAST_B_04_00.xlsx")
+f_path=os.path.join(folder,r"xxxx.xlsx")
 rpt=pd.read_excel(f_path,sheetname="Summary",skiprows=7,names=["compound","ng/mL"],header=None,index_col=0,parse_cols="A,B,G")
 lst=[i for i in range(0,len(rpt))]
 rpt["Row"]=lst # Add a new column of numbers
